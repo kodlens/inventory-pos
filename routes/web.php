@@ -29,6 +29,7 @@ require __DIR__.'/auth.php';
 
 
 Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+    
     Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
 
 
